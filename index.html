@@ -4,14 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Procedimentos Injetáveis no Morumbi | Clínica Especializada com Biomédica</title>
+<title>Botox, Harmonização Facial e Procedimentos Injetáveis no Morumbi | Dra. Luciana Andrade</title>
 
-<meta name="description" content="Procedimentos injetáveis com biomédica habilitada, atendimento exclusivo em clínica com endereço fixo no Morumbi. Agende sua avaliação pelo WhatsApp.">
+<meta name="description" content="Agende sua avaliação com a Dra. Luciana Andrade no Morumbi. Botox, Harmonização Facial e Preenchimentos com segurança e atendimento exclusivo. Ligue ou chame no WhatsApp agora!">
+<meta name="keywords" content="procedimentos injetáveis, botox, harmonização facial, preenchimento labial, Morumbi, clínica estética, biomédica habilitada">
+<meta name="robots" content="index, follow">
 
+<link rel="icon" href="favicon.webp" type="image/webp">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
-<style>
+<!-- Open Graph -->
+<meta property="og:title" content="Procedimentos Injetáveis no Morumbi | Dra. Luciana Andrade">
+<meta property="og:description" content="Agende sua avaliação para Botox, Harmonização Facial e Preenchimentos. Atendimento exclusivo no Morumbi.">
+<meta property="og:image" content="agulha.webp">
+<meta property="og:url" content="https://seusite.com.br">
+<meta property="og:type" content="website">
 
+<style>
 /* RESET */
 *{
   margin:0;
@@ -34,29 +43,18 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  text-align:center; /* garante centralização do texto */
+  text-align:center;
   background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
     url('agulha.webp') center/cover no-repeat;
   padding: env(safe-area-inset-top) 16px;
 }
 
-/* CONTAINER DO CONTEÚDO */
 .hero-box{
   width:100%;
   max-width:900px;
   margin:0 auto;
 }
-
-
-
-
-
-
-
-
-
-
 
 .hero h1{
   font-size:2.7rem;
@@ -84,7 +82,7 @@ body{
   color:#eef5ff;
 }
 
-/* BOTÃO */
+/* BOTÃO PRINCIPAL */
 .btn{
   display:inline-block;
   background:#25D366;
@@ -97,10 +95,7 @@ body{
   box-shadow:0 10px 30px rgba(37,211,102,.45);
 }
 .btn:hover{transform:scale(1.05);}
-
-.btn-pulse{
-  animation:btnPulse 2.4s infinite;
-}
+.btn-pulse{animation:btnPulse 2.4s infinite;}
 @keyframes btnPulse{
   0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
   70%{box-shadow:0 0 0 22px rgba(37,211,102,0);}
@@ -108,17 +103,8 @@ body{
 }
 
 /* SECTIONS */
-.section{
-  padding:90px 20px;
-  text-align:center;
-}
-
-.section h2{
-  font-size:2.2rem;
-  margin-bottom:50px;
-  color:#5f93ea;
-}
-
+.section{padding:90px 20px;text-align:center;}
+.section h2{font-size:2.2rem;margin-bottom:50px;color:#5f93ea;}
 .section.highlight,
 .section.how-it-works,
 .section.procedures,
@@ -146,11 +132,7 @@ body{
 }
 
 .card::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  border-radius:22px;
-  border:1px solid rgba(170,210,255,.35);
+  content:'';position:absolute;inset:0;border-radius:22px;border:1px solid rgba(170,210,255,.35);
 }
 
 .card:hover{
@@ -168,7 +150,6 @@ body{
   gap:15px;
   flex-wrap:wrap;
 }
-
 .badges span{
   background:linear-gradient(180deg,#ffffff,#f3f7ff);
   border:1px solid #dbe7ff;
@@ -178,10 +159,7 @@ body{
   color:#5f93ea;
   transition:.3s;
 }
-.badges span:hover{
-  background:#5f93ea;
-  color:#fff;
-}
+.badges span:hover{background:#5f93ea;color:#fff;}
 
 /* STEPS */
 .steps{max-width:900px;margin:0 auto;text-align:left;}
@@ -209,36 +187,16 @@ body{
   box-shadow:0 16px 34px rgba(120,160,220,.25);
   position:relative;
 }
-
 .testimonial-box::before,
 .testimonial-box::after{
-  content:'';
-  position:absolute;
-  width:100%;
-  height:4px;
-  background:linear-gradient(90deg,transparent,#9fc7ff,transparent);
+  content:'';position:absolute;width:100%;height:4px;background:linear-gradient(90deg,transparent,#9fc7ff,transparent);
 }
-
-.testimonial-box::before{
-  top:0;
-  left:-100%;
-  animation:barMove 3s infinite linear;
-}
-.testimonial-box::after{
-  bottom:0;
-  right:-100%;
-  animation:barMoveReverse 3s infinite linear;
-}
-
+.testimonial-box::before{top:0;left:-100%;animation:barMove 3s infinite linear;}
+.testimonial-box::after{bottom:0;right:-100%;animation:barMoveReverse 3s infinite linear;}
 @keyframes barMove{from{left:-100%;}to{left:100%;}}
 @keyframes barMoveReverse{from{right:-100%;}to{right:100%;}}
 
-.testimonial-scroll{
-  height:calc(100% - 8px);
-  overflow-y:auto;
-  padding:30px 18px;
-}
-
+.testimonial-scroll{height:calc(100% - 8px);overflow-y:auto;padding:30px 18px;}
 .testimonial-card{
   background:linear-gradient(180deg,#ffffff,#f1f6ff);
   border-radius:18px;
@@ -246,15 +204,9 @@ body{
   margin-bottom:20px;
   box-shadow:inset 0 0 10px rgba(170,210,255,.25);
 }
-
 .testimonial-card img{
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  border:3px solid #9fc7ff;
-  margin-bottom:12px;
+  width:70px;height:70px;border-radius:50%;border:3px solid #9fc7ff;margin-bottom:12px;
 }
-
 .stars{color:#FFD700;}
 
 /* AVISO LEGAL */
@@ -264,7 +216,6 @@ body{
   text-align:center;
   border-top:1px solid #dbe7ff;
 }
-
 .legal-note p{
   font-size:.78rem;
   color:#666;
@@ -282,7 +233,7 @@ footer{
   font-size:.85rem;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLUTUANTE */
 .whatsapp{
   position:fixed;
   bottom:22px;
@@ -297,108 +248,73 @@ footer{
   box-shadow:0 10px 25px rgba(37,211,102,.35);
   transition:.3s;
   animation:whatsPulse 2.6s infinite;
+  z-index:999;
 }
-
 .whatsapp:hover{
   transform:translateY(-4px) scale(1.08);
   box-shadow:0 16px 34px rgba(37,211,102,.45);
-  animation:none; /* pausa o pulso no hover */
+  animation:none; 
 }
+.whatsapp img{width:26px;}
 
-.whatsapp img{
-  width:26px;
-}
-
-/* ANIMAÇÃO SUAVE */
 @keyframes whatsPulse{
-  0%{
-    box-shadow:0 0 0 0 rgba(37,211,102,.45);
-  }
-  70%{
-    box-shadow:0 0 0 18px rgba(37,211,102,0);
-  }
-  100%{
-    box-shadow:0 0 0 0 rgba(37,211,102,0);
-  }
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.45);}
+  70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
-
-
-@keyframes pulse{
-  0%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,.7);}
-  70%{transform:scale(1.08);box-shadow:0 0 0 25px rgba(37,211,102,0);}
-  100%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0);}
+/* RESPONSIVO */
+@media (max-width:768px){
+  .hero-box {margin-top: 80px;}
+  .hero h1 {font-size: 2rem;}
+  .hero p {font-size: 1rem;}
+  .whatsapp{animation:whatsPulse 2.6s infinite;} /* botão pulsando no mobile também */
 }
-
-@media (max-width:768px) {
-  .hero-box {
-    margin-top: 80px; /* ajusta para abaixar o conteúdo */
-  }
-
-  .hero h1 {
-    font-size: 2rem; /* mantém o tamanho legível no celular */
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </style>
+
+<!-- SCHEMA LOCAL -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Clínica Luciana Andrade",
+  "image": "agulha.webp",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Dr. Luiz Migliano, nº 1986, Morumbi Sala 1520",
+    "addressLocality": "São Paulo",
+    "postalCode": "05711-001",
+    "addressCountry": "BR"
+  },
+  "telephone": "+5511967305327",
+  "url": "https://seusite.com.br"
+}
+</script>
+
 </head>
 
 <body>
 
-<section class="hero">
+<header class="hero">
   <div class="hero-box">
    <h1>
-Procedimentos Injetáveis no Morumbi
+Botox e Procedimentos Injetáveis no Morumbi
 <span>Clínica especializada • Biomédica habilitada • Atendimento exclusivo</span>
 </h1>
-
-
-
- <p>
+<p>
 Atendimento realizado em clínica especializada no Morumbi – São Paulo,
 com endereço fixo, biomédica habilitada e estrutura completa.
 </p>
-
-
-    <a class="btn btn-pulse" href="https://wa.me/5511967305327">
+<a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação" target="_blank" rel="noopener noreferrer">
   Agendar avaliação no Morumbi
 </a>
-
-<div class="benefits">
-📍 Clínica no Morumbi • Atendimento com horário marcado
-</div>
-    <div class="benefits">
-      ✔ Profissional habilitada • ✔ Clínica com endereço fixo • ✔ Local regulamentado e confiável
-    </div>
+<div class="benefits">📍 Clínica no Morumbi • Atendimento com horário marcado</div>
+<div class="benefits">✔ Profissional habilitada • ✔ Clínica com endereço fixo • ✔ Local regulamentado e confiável</div>
   </div>
-</section>
+</header>
 
-
+<main>
 <!-- DESTAQUES -->
 <section class="section highlight">
   <h2>Por que meu atendimento é diferente?</h2>
@@ -417,8 +333,6 @@ com endereço fixo, biomédica habilitada e estrutura completa.
     </div>
   </div>
 </section>
-
-
 
 <!-- COMO FUNCIONA -->
 <section class="section how-it-works">
@@ -443,38 +357,30 @@ com endereço fixo, biomédica habilitada e estrutura completa.
   </div>
 </section>
 
-
-
 <!-- AUTORIDADE -->
 <section class="section authority">
   <h2>Segurança & Responsabilidade</h2>
   <p>Todos os procedimentos seguem protocolos técnicos, normas da vigilância sanitária e são realizados por biomédica habilitada, com produtos registrados e rastreáveis.</p>
-<p><br><br>
+  <p><br><br>
 Biomédica registrada no CRBM, com atuação conforme normas da Anvisa
 e Vigilância Sanitária.
-</p>
+  </p>
 </section>
 
 <!-- O QUE SÃO PROCEDIMENTOS INJETÁVEIS -->
 <section class="section authority">
   <h2>O que são procedimentos injetáveis?</h2>
-
   <p>
-    Procedimentos injetáveis são tratamentos estéticos realizados por meio da aplicação
-    controlada de substâncias específicas, com foco em harmonização facial,
-    estímulo de colágeno e melhora da qualidade da pele.
+Procedimentos injetáveis são tratamentos estéticos realizados por meio da aplicação
+controlada de substâncias específicas, com foco em harmonização facial,
+estímulo de colágeno e melhora da qualidade da pele.
   </p>
-
   <p style="margin-top:18px;">
-    Todos os procedimentos exigem avaliação individual, conhecimento anatômico
-    e execução por profissional habilitado, seguindo rigorosamente
-    as normas da Anvisa e da Vigilância Sanitária.
+Todos os procedimentos exigem avaliação individual, conhecimento anatômico
+e execução por profissional habilitado, seguindo rigorosamente
+as normas da Anvisa e da Vigilância Sanitária.
   </p>
 </section>
-
-
-
-
 
 <!-- PROCEDIMENTOS -->
 <section class="section procedures">
@@ -494,142 +400,102 @@ e Vigilância Sanitária.
 <!-- DEPOIMENTOS -->
 <section class="section testimonials">
   <h2>O que as pacientes dizem</h2>
-
   <div class="testimonial-box">
+    <div class="testimonial-scroll">
 
-    <!-- ÁREA QUE ROLA -->
-<div class="testimonial-scroll">
+      <div class="testimonial-card">
+        <img src="alessandra.webp" alt="Alessandra Vanessa - paciente satisfeita" loading="lazy">
+        <p><span class="stars">★★★★★</span><br>“Profissional maravilhosa, gentil, delicada no atendimento. Super indico!!!”</p>
+        <h4>Alessandra Vanessa</h4>
+      </div>
 
-  <div class="testimonial-card">
-    <img src="alessandra.png" alt="Alessandra Vanessa">
+      <div class="testimonial-card">
+        <img src="fabiola.webp" alt="Fabíola Cristina - paciente satisfeita" loading="lazy">
+        <p><span class="stars">★★★★★</span><br>“Profissional maravilhosa sempre faço meus procedimentos com ela Luciana amo demais super recomendo ❤️🤩”</p>
+        <h4>Fabíola Cristina</h4>
+      </div>
 
-    <p>
-      <span class="stars">★★★★★</span><br>
-      “Profissional maravilhosa, gentil, delicada no atendimento. Super indico!!!”
-    </p>
-    <h4>Alessandra Vanessa</h4>
-  </div>
+      <div class="testimonial-card">
+        <img src="marcos.webp" alt="Marcos Benevides - paciente satisfeito" loading="lazy">
+        <p><span class="stars">★★★★★</span><br>“Ambiente maravilhoso e uma profissional espetacular, voltarei com certeza 👏”</p>
+        <h4>Marcos Benevides</h4>
+      </div>
 
-  <div class="testimonial-card">
-    <img src="fabiola.jpg" alt="Fabíola Cristina">
+      <div class="testimonial-card">
+        <img src="cibele.webp" alt="Cibele Passos - paciente satisfeita" loading="lazy">
+        <p><span class="stars">★★★★★</span><br>“Maravilhosaaa! Adorei o atendimento e o procedimento.”</p>
+        <h4>Cibele Passos</h4>
+      </div>
 
-    <p>
-      <span class="stars">★★★★★</span><br>
-      “Profissional maravilhosa sempre faço meus procedimentos com ela Luciana amo demais super recomendo ❤️🤩”
-    </p>
-    <h4>Fabíola Cristina</h4>
-  </div>
+      <div class="testimonial-card">
+        <img src="adriana.webp" alt="Adriana Bernardo da Silva - paciente satisfeita" loading="lazy">
+        <p><span class="stars">★★★★★</span><br>“Muito bom.”</p>
+        <h4>Adriana Bernardo da Silva</h4>
+      </div>
 
-  <div class="testimonial-card">
-      <img src="marcos.jpg" alt="Marcos Benevides">
-    <p>
-      <span class="stars">★★★★★</span><br>
-      “Ambiente maravilhoso e uma profissional espetacular, voltarei com certeza 👏”
-    </p>
-    <h4>Marcos Benevides</h4>
-  </div>
+      <div class="testimonial-card">
+        <img src="rosana.webp" alt="Rosana Quina - paciente satisfeita" loading="lazy">
+        <p><span class="stars">★★★★★</span><br>“Muito profissional!!”</p>
+        <h4>Rosana Quina</h4>
+      </div>
 
-  <div class="testimonial-card">
-    <img src="cibele.jpg" alt="Cibele Passos">
-    <p>
-      <span class="stars">★★★★★</span><br>
-      “Maravilhosaaa! Adorei o atendimento e o procedimento.”
-    </p>
-    <h4>Cibele Passos</h4>
-  </div>
-
-  <div class="testimonial-card">
-    <img src="adriana.jpg" alt="Adriana Bernardo da Silva">
-    <p>
-      <span class="stars">★★★★★</span><br>
-      “Muito bom.”
-    </p>
-    <h4>Adriana Bernardo da Silva</h4>
-  </div>
-
-  <div class="testimonial-card">
-    <img src="rosana.jpg" alt="Rosana Quina">
-    <p>
-      <span class="stars">★★★★★</span><br>
-      “Muito profissional!!”
-    </p>
-    <h4>Rosana Quina</h4>
-  </div>
-
-  <!-- AVALIAÇÕES SOMENTE COM ESTRELAS -->
-
-  <div class="testimonial-card">
-    <img src="eliana.jpg" alt="Eliana Benedetti">
-    <p><span class="stars">★★★★★</span></p>
-    <h4>Eliana Benedetti</h4>
-  </div>
-
-  <div class="testimonial-card">
-    <img src="silva.jpg" alt="Silvia Luiza">
-    <p><span class="stars">★★★★★</span></p>
-    <h4>Silvia Luiza</h4>
-  </div>
-
-  <div class="testimonial-card">
-    <img src="marcia.jpg" alt="Marcia Franca">
-    <p><span class="stars">★★★★★</span></p>
-    <h4>Marcia Franca</h4>
-  </div>
-
-  <div class="testimonial-card">
-    <img src="maria.jpg" alt="Maria Eva De Jesus Souza">
-    <p><span class="stars">★★★★★</span></p>
-    <h4>Maria Eva De Jesus Souza</h4>
-  </div>
-
+<div class="testimonial-card">
+  <img src="eliana.webp" alt="Eliana Benedetti - paciente satisfeita" loading="lazy">
+  <p><span class="stars">★★★★★</span><br>“Atendimento excelente, super recomendo!”</p>
+  <h4>Eliana Benedetti</h4>
 </div>
 
+<div class="testimonial-card">
+  <img src="silvia.webp" alt="Silvia Luiza - paciente satisfeita" loading="lazy">
+  <p><span class="stars">★★★★★</span><br>“Profissional muito atenciosa e simpática.”</p>
+  <h4>Silvia Luiza</h4>
+</div>
 
+<div class="testimonial-card">
+  <img src="marcia.webp" alt="Marcia Franca - paciente satisfeita" loading="lazy">
+  <p><span class="stars">★★★★★</span><br>“Adorei o resultado, clínica ótima!”</p>
+  <h4>Marcia Franca</h4>
+</div>
 
-
+<div class="testimonial-card">
+  <img src="maria.webp" alt="Maria Eva De Jesus Souza - paciente satisfeita" loading="lazy">
+  <p><span class="stars">★★★★★</span><br>“Muito profissional e ambiente seguro.”</p>
+  <h4>Maria Eva De Jesus Souza</h4>
+</div>
 
 
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA FINAL -->
 <section class="section cta">
-  <h2>Agende sua avaliação</h2>
-
-  <p>
-    Se você busca procedimentos injetáveis com segurança, técnica e atendimento exclusivo,
-    este serviço é para você.
-  </p>
-
-  <p style="font-size:.95rem; margin-top:12px; font-weight:600;">
-    Agenda com vagas limitadas para atendimento exclusivo.
-  </p>
-<br>
-<a class="btn btn-pulse" href="https://wa.me/5511967305327">
-  Falar agora no WhatsApp
-</a>
-
+  <h2>Agende sua avaliação agora</h2>
+  <p>Entre em contato via WhatsApp e garanta seu horário em nossa clínica no Morumbi. Atendimento personalizado, seguro e exclusivo.</p>
+  <br> <a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação" target="_blank" rel="noopener noreferrer">
+   Agendar avaliação
+  </a>
 </section>
 
+<!-- AVISO LEGAL -->
 <section class="legal-note">
   <p>
-    Os resultados podem variar de acordo com cada paciente.
-    A avaliação individual é indispensável.
+⚠️ Importante: Todos os procedimentos estéticos exigem avaliação individual.
+Resultados variam conforme paciente. Atendimento realizado por biomédica habilitada,
+seguindo normas técnicas, Anvisa e Vigilância Sanitária.
   </p>
 </section>
 
+</main>
 
-<!-- FOOTER -->
 <footer>
   <strong>Dra. Luciana Andrade • Biomédica</strong>
   <div>📍 Rua Dr. Luiz Migliano, nº 1986, Morumbi Sala 1520 – São Paulo/SP • Cep 05711-001</div>
   <div class="hours">Horário de atendimento: Seg-Sex 09h às 18h</div>
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/5511967305327" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<a class="whatsapp btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação" target="_blank" rel="noopener noreferrer">
+  <img src="zap.webp" alt="WhatsApp">
 </a>
 
 </body>
