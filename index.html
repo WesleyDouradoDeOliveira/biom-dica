@@ -267,19 +267,28 @@ footer{
 
 /* RESPONSIVO */
 @media (max-width:768px){
-  .hero-box {
-    margin-top: 50px; /* ajuste o valor conforme quiser: 50px ou 60px para descer mais */
+  .hero {
+    align-items: flex-start; /* faz o conteúdo começar do topo, e aí a margin-top funciona */
+    padding-top: 280px; /* ajuste quanto quer que desça */
   }
+
+  .hero-box {
+    margin-top: 0; /* opcional, agora o padding do hero controla a distância */
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
+
   .hero p {
     font-size: 1rem;
   }
+
   .whatsapp {
     animation: whatsPulse 2.6s infinite; /* botão pulsando no mobile também */
   }
 }
+
 
 </style>
 
