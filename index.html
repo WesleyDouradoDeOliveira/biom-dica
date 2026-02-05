@@ -18,6 +18,20 @@
   <meta property="og:type" content="website">
 
   <style>
+
+    .site-header {
+  height: 100px;
+  background: linear-gradient(135deg, #7aa6f8, #a7c5ff); /* Mesma cor da top-bar */
+  margin-bottom: 0;
+  display: block;
+}
+
+.hero {
+  margin-top: 0;
+  border: none;
+  /* Use min-height para garantir que a imagem sempre cubra o fundo */
+  min-height: calc(100vh - 100px); 
+}
     /* RESET */
     *{
       margin:0;
@@ -26,11 +40,13 @@
       font-family:'Montserrat',sans-serif;
     }
 
-    body{
-      background:linear-gradient(180deg,#ffffff,#f4f8ff);
-      color:#222;
-      line-height:1.7;
-    }
+    body {
+  /* O degrade agora fica fixo no fundo, ele não "sobe" com o scroll */
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%) no-repeat fixed;
+  color: #222;
+  line-height: 1.7;
+  margin: 0;
+}
     .site-header{
   height:100px;
 }
@@ -46,7 +62,7 @@
   text-align:center;
   background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url('agulha.webp') center center / cover no-repeat;
+    url('fundo.webp') center center / cover no-repeat;
   padding:0px;
   overflow:hidden;
 }
@@ -113,8 +129,11 @@
 .section.procedures,
 .section.cta,
 .section.testimonials,
-.section.authority{
-  background:linear-gradient(135deg,#f9fbff,#eef4ff);
+.section.authority {
+  /* Removemos o fundo individual para não "cortar" o degrade do body */
+  background: transparent;
+  padding: 90px 20px;
+  text-align: center;
 }
 
 /* GRID */
@@ -266,33 +285,80 @@ footer{
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
-/* RESPONSIVO */
-@media (max-width:768px){
-  .hero {
-    align-items: flex-start; /* faz o conteúdo começar do topo, e aí a margin-top funciona */
-    padding-top: 180px; /* ajuste quanto quer que desça */
-  }
-
-  .hero-box {
-    margin-top: 0; /* opcional, agora o padding do hero controla a distância */
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .whatsapp {
-    animation: whatsPulse 2.6s infinite; /* botão pulsando no mobile também */
-  }
+/* HERO CORRETO PARA PC */
+.hero {
+  /* Ocupa a altura total da tela menos os 100px do cabeçalho azul */
+  min-height: calc(100vh - 100px);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* background-size: cover faz a imagem preencher tudo sem sobrar branco */
+  background: 
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url('fundo.webp') center center / cover no-repeat;
+    
+  /* Fixa a imagem no fundo para dar efeito de profundidade ao rolar no PC */
+  background-attachment: fixed; 
+  
+  padding: 60px 20px;
+  overflow: hidden;
+  border: none;
+  margin: 0;
 }
 
-.site-header{
-  height:100px; /* ajuste fino se quiser (90–110px) */
+.hero-box {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+
+
+/* RESPONSIVO AJUSTADO */
+/* AJUSTE PARA ELIMINAR A LINHA BRANCA */
+.site-header {
+  height: 100px;
+  width: 100%;
+  display: block; /* Garante que ele se comporte como bloco fixo */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.hero {
+  /* O segredo está aqui: tiramos o calc e usamos 100% da altura se necessário, 
+     ou mantemos o calc garantindo que não haja margens */
+  min-height: calc(100vh - 100px); 
+  
+  margin-top: 0; /* Garante que não haja espaço acima */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* background-size: cover preenche tudo */
+  background: 
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url('fundo.webp') center center / cover no-repeat;
+    
+  background-attachment: fixed; /* Efeito elegante no PC */
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
+
+/* Garante que o container interno não empurre a seção */
+.hero-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
 
 
 /* HEADER BASE */
@@ -561,6 +627,13 @@ footer{
 
 
 
+/* Destaca o texto das vantagens */
+.benefits {
+  color: #ffffff; /* branco puro */
+  font-weight: 600; /* deixa o texto mais “forte” */
+  font-size: 1rem; /* aumenta se quiser */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* opcional: cria contraste se o fundo for claro ou colorido */
+}
 
 
 
@@ -637,8 +710,11 @@ Botox e Procedimentos Injetáveis no Morumbi
 <a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação" target="_blank" rel="noopener noreferrer">
   Agendar avaliação no Morumbi
 </a>
-<div class="benefits">📍 Clínica no Morumbi • Atendimento com horário marcado</div>
+
+
+<div class="benefits"><br>📍 Clínica no Morumbi • Atendimento com horário marcado</div>
 <div class="benefits">✔ Profissional habilitada • ✔ Clínica com endereço fixo • ✔ Local regulamentado e confiável</div>
+
   </div>
 </header>
 
@@ -660,7 +736,9 @@ Botox e Procedimentos Injetáveis no Morumbi
 
 
 
-<section class="section clinic-style">
+<section class="section clinic-style highlight">
+
+
   <h2>Clínica especializada no Morumbi</h2>
   <p class="clinic-sub">
     Onde estética, saúde e segurança caminham juntas em um atendimento exclusivo.
@@ -698,29 +776,52 @@ Botox e Procedimentos Injetáveis no Morumbi
 
 
 
+<!-- PRINCIPAIS PROCEDIMENTOS -->
+<section class="section main-procedures">
+  <h2>Principais Procedimentos</h2>
+
+  <div class="grid procedures-grid">
+
+        <div class="procedure-card">
+      <img src="5.webp" alt="Rinomodelação com Fios">
+      <h3>Rinomodelação com Fios</h3>
+      <p>Procedimento que modela o nariz sem cirurgia, usando fios para harmonizar traços faciais, corrigir pequenas imperfeições e melhorar o perfil.</p>
+      <a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação%20para%20Rinomodelação%20com%20Fios" target="_blank">
+        Agendar agora
+      </a>
+    </div>
+
+
+    <!-- CARD 1 - Fios de PDO -->
+    <div class="procedure-card highlight">
+      <img src="2.webp" alt="Fios de PDO (Face e Corpo)">
+      <h3>Fios de PDO (Face e Corpo)</h3>
+      <p>Fios de sustentação que estimulam a produção de colágeno, promovendo efeito lifting, firmeza da pele e melhora do contorno facial ou corporal.</p>
+      <a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação%20para%20Fios%20de%20PDO" target="_blank">
+        Agendar agora
+      </a>
+    </div>
 
 
 
+
+
+
+  </div>
+</section>
 
 
 
 
 <!-- PROCEDIMENTOS -->
-<section class="section procedures">
-  <h2>Procedimentos realizados</h2>
+<section class="section main-procedures procedures">
+
+  <h2>Outros Procedimentos realizados</h2>
 
   <div class="grid procedures-grid">
-    <!-- CARD 1 -->
-    <div class="procedure-card">
-      <img src="1.webp" alt="Harmonização Facial">
-      <h3>Harmonização Facial</h3>
-      <p>Procedimento estético que visa equilibrar e valorizar os traços faciais, promovendo simetria, definição e rejuvenescimento natural da face.</p>
-      <a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação%20para%20Harmonização%20Facial" target="_blank">
-        Agendar agora
-      </a>
-    </div>
 
-    <!-- CARD 2 -->
+    <!-- PRINCIPAIS PROCEDIMENTOS -->
+    <!-- CARD 1 -->
     <div class="procedure-card">
       <img src="2.webp" alt="Fios de PDO (Face e Corpo)">
       <h3>Fios de PDO (Face e Corpo)</h3>
@@ -730,7 +831,20 @@ Botox e Procedimentos Injetáveis no Morumbi
       </a>
     </div>
 
-    <!-- CARD 3 -->
+    <!-- CARD 2 -->
+    <div class="procedure-card">
+      <img src="1.webp" alt="Harmonização Facial">
+      <h3>Harmonização Facial</h3>
+      <p>Procedimento estético que visa equilibrar e valorizar os traços faciais, promovendo simetria, definição e rejuvenescimento natural da face.</p>
+      <a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação%20para%20Harmonização%20Facial" target="_blank">
+        Agendar agora
+      </a>
+    </div>
+
+
+
+    <!-- OUTROS PROCEDIMENTOS -->
+    <!-- CARD 4 -->
     <div class="procedure-card">
       <img src="3.webp" alt="Botox">
       <h3>Botox</h3>
@@ -740,22 +854,12 @@ Botox e Procedimentos Injetáveis no Morumbi
       </a>
     </div>
 
-    <!-- CARD 4 -->
+    <!-- CARD 5 -->
     <div class="procedure-card">
       <img src="4.webp" alt="Bioestimulador de Colágeno">
       <h3>Bioestimulador de Colágeno</h3>
       <p>Indicado para estimular a firmeza e elasticidade da pele, promovendo produção de colágeno e melhoria do contorno facial de forma natural.</p>
       <a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação%20para%20Bioestimulador%20de%20Colágeno" target="_blank">
-        Agendar agora
-      </a>
-    </div>
-
-    <!-- CARD 5 -->
-    <div class="procedure-card">
-      <img src="5.webp" alt="Rinomodelação com Fios">
-      <h3>Rinomodelação com Fios</h3>
-      <p>Procedimento que modela o nariz sem cirurgia, usando fios para harmonizar traços faciais, corrigir pequenas imperfeições e melhorar o perfil.</p>
-      <a class="btn btn-pulse" href="https://wa.me/5511967305327?text=Olá,%20quero%20agendar%20uma%20avaliação%20para%20Rinomodelação%20com%20Fios" target="_blank">
         Agendar agora
       </a>
     </div>
@@ -789,8 +893,10 @@ Botox e Procedimentos Injetáveis no Morumbi
         Agendar agora
       </a>
     </div>
+
   </div>
 </section>
+
 
 
 
@@ -975,7 +1081,14 @@ as normas da Anvisa e da Vigilância Sanitária.
   <h2>Como chegar</h2>
 
   <div style="max-width:1100px;margin:0 auto;border-radius:22px;overflow:hidden;box-shadow:0 16px 34px rgba(120,160,220,.25);">
-    <iframe src="https://www.google.com/maps?q=Rua+Dr.+Luiz+Migliano,+1986,+Morumbi,+São+Paulo&amp;output=embed" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.123456789!2d-46.744473!3d-23.6216988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce56af50c7b19f%3A0x27c2292e720dc9d9!2sRua%20Dr.%20Luiz%20Migliano%2C%201986%20-%20Morumbi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005711-001!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+      width="100%" 
+      height="380" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
 </section>
